@@ -1,0 +1,19 @@
+[
+{
+    "model": "users.customuser",
+    "pk": "4dabc728-88a4-480c-91eb-8efa1a01798c",
+    "fields": {
+        "password": "pbkdf2_sha256$260000$pedY1OpxAj6B950Jhj6CeZ$h7eO6oyxnXAGpi5WRlRcCbZw73s4uEZnJl1PMowwNP4=",
+        "created_at": "2022-05-30T07:04:03.332Z",
+        "updated_at": "2022-05-30T07:04:03.332Z",
+        "phone": "8489283456",
+        "email": "selvaganesh3m@gmail.com",
+        "name": "selvaganesh",
+        "is_staff": true,
+        "is_superuser": true,
+        "is_blocked": false,
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

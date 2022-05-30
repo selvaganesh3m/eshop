@@ -13,9 +13,7 @@ class TimestampedModel(models.Model):
         abstract = True
 
 
-
 REGEX_PHONE = RegexValidator(r'^(?!0|1|2|3|4|5)[0-9]{10}$', 'Mobile number validator')
-
 
 
 class CustomUserManager(BaseUserManager):
@@ -41,11 +39,10 @@ class CustomUserManager(BaseUserManager):
         return self.create_user(phone, password, **extra_fields)
 
 
-
 class CustomUser(AbstractBaseUser, TimestampedModel, PermissionsMixin):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     phone = models.CharField(max_length=10, validators=[REGEX_PHONE], unique=True)
-    email = models.EmailField(max_length=130)
+    email = models.EmailField(max_length=130, unique=True)
     name = models.CharField(max_length=120)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
