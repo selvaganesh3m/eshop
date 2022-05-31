@@ -1,1 +1,1 @@
-docker-compose exec eshop_web ./init-alpha.sh
+docker exec -it eshop_web_1 bash ./init-alpha.sh
