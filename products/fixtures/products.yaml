@@ -1,0 +1,81 @@
+- model: products.product
+  pk: 1
+  fields:
+    name: Almonds - 100g
+    price: 115.00
+    category: 1
+    created_at: '2022-06-1 16:00:26.260524+05:30'
+    updated_at: '2022-06-1 16:00:26.260524+05:30'
+
+- model: products.product
+  pk: 2
+  fields:
+    name: Almonds - 250g
+    price: 245.00
+    category: 1
+    created_at: '2022-06-1 16:00:26.260524+05:30'
+    updated_at: '2022-06-1 16:00:26.260524+05:30'
+
+- model: products.product
+  pk: 3
+  fields:
+    name: Almonds - 500g
+    price: 465.00
+    category: 1
+    created_at: '2022-06-1 16:00:26.260524+05:30'
+    updated_at: '2022-06-1 16:00:26.260524+05:30'
+
+
+- model: products.product
+  pk: 4
+  fields:
+    name: Cashew - 100g
+    price: 125.00
+    category: 2
+    created_at: '2022-06-1 16:00:26.260524+05:30'
+    updated_at: '2022-06-1 16:00:26.260524+05:30'
+
+- model: products.product
+  pk: 5
+  fields:
+    name: Cashew - 250g
+    price: 280.00
+    category: 2
+    created_at: '2022-06-1 16:00:26.260524+05:30'
+    updated_at: '2022-06-1 16:00:26.260524+05:30'
+
+- model: products.product
+  pk: 6
+  fields:
+    name: Cashew - 500g
+    price: 520.00
+    category: 2
+    created_at: '2022-06-1 16:00:26.260524+05:30'
+    updated_at: '2022-06-1 16:00:26.260524+05:30'
+
+- model: products.product
+  pk: 7
+  fields:
+    name: Pistachios - 100g
+    price: 140.00
+    category: 3
+    created_at: '2022-06-1 16:00:26.260524+05:30'
+    updated_at: '2022-06-1 16:00:26.260524+05:30'
+
+- model: products.product
+  pk: 8
+  fields:
+    name: Pistachios - 250g
+    price: 315.00
+    category: 3
+    created_at: '2022-06-1 16:00:26.260524+05:30'
+    updated_at: '2022-06-1 16:00:26.260524+05:30'
+
+- model: products.product
+  pk: 9
+  fields:
+    name: Pistachios - 500g
+    price: 595.00
+    category: 3
+    created_at: '2022-06-1 16:00:26.260524+05:30'
+    updated_at: '2022-06-1 16:00:26.260524+05:30'
