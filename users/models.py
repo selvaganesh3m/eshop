@@ -3,6 +3,7 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.contrib.auth.base_user import BaseUserManager
 from django.core.validators import RegexValidator
 import uuid
+from django.conf import settings
 
 
 class TimestampedModel(models.Model):
@@ -14,6 +15,7 @@ class TimestampedModel(models.Model):
 
 
 REGEX_PHONE = RegexValidator(r'^(?!0|1|2|3|4|5)[0-9]{10}$', 'Mobile number validator')
+PINCODE_VALIDATOR = RegexValidator(r'^[0-9]{6}$', 'Pincode validator')
 
 
 class CustomUserManager(BaseUserManager):
@@ -57,3 +59,19 @@ class CustomUser(AbstractBaseUser, TimestampedModel, PermissionsMixin):
 
     def __str__(self) -> str:
         return self.name
+
+
+class UserAddress(TimestampedModel):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    house_no = models.CharField(max_length=10)
+    street = models.CharField(max_length=50)
+    area = models.CharField(max_length=50)
+    city = models.CharField(max_length=50)
+    state = models.CharField(max_length=50)
+    pincode = models.CharField(max_length=50, validators=[PINCODE_VALIDATOR])
+
+    class Meta:
+        verbose_name_plural = 'user_addresses'
+
+    def __str__(self):
+        return self.user.name

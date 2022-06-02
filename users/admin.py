@@ -2,8 +2,7 @@ import email
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
-from .models import CustomUser
-
+from .models import CustomUser, UserAddress
 
 
 class CustomUserAdmin(UserAdmin):
@@ -18,10 +17,11 @@ class CustomUserAdmin(UserAdmin):
         (None, {
             'classes': ('wide',),
             'fields': ('phone', 'email', 'name', 'password1', 'password2', 'is_superuser', 'is_staff',)}
-        ),
+         ),
     )
     search_fields = ('phone',)
     ordering = ('phone',)
 
-admin.site.register(CustomUser, CustomUserAdmin)
 
+admin.site.register(CustomUser, CustomUserAdmin)
+admin.site.register(UserAddress)
