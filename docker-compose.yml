@@ -8,3 +8,7 @@ services:
       - 8000:8000
     volumes:
       - .:/web
+
+  eshop_web:
+    restart: always
+    build: .

@@ -9,10 +9,9 @@ class AddToCartView(View):
 
     def get(self, request, *args, **kwargs):
         user = request.user
-        user_cart = user.cart
-        if user:
-            if user_cart:
-                cart = Cart.objects.get(cart=user_cart)
+        if user.is_authenticated:
+            if user.cart:
+                cart = Cart.objects.get(cart=user.cart)
                 cart_items = cart.cart_items.all()
                 context = {'cart_items': cart_items}
                 return render(request, 'cart/cart_items.html', context)
